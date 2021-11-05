@@ -7,13 +7,13 @@ export default function Layout({ preview, children }) {
   return (
     <>
       <Meta />
-      <Sidebar>
-        <div className="min-h-screen">
-        <Header />
+      <div className="flex w-full h-full min-h-screen">
+        <Sidebar />
+        <div className="flex flex-1 my-20 md:pl-20 lg:pl-80 pl-8">
           <main>{children}</main>
         </div>
-      </Sidebar>
       <Footer />
+      </div>
     </>
   );
 }
