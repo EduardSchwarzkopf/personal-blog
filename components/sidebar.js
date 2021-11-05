@@ -6,6 +6,7 @@ export default function Sidebar({ children }) {
           <h1 className="text-3xl uppercase text-indigo-500">Logo</h1>
         </div>
         <ul className="flex flex-col py-4">
+          {/* Me Section */}
           <li>
             <a
               href="#"
@@ -28,6 +29,7 @@ export default function Sidebar({ children }) {
               <span className="text-sm font-medium">Blog</span>
             </a>
           </li>
+          {/* Projects Section */}
           <li>
             <a
               href="#"
@@ -50,6 +52,7 @@ export default function Sidebar({ children }) {
               <span className="text-sm font-medium">Bookmarks</span>
             </a>
           </li>
+          {/* Social Section */}
           <li>
             <a
               href="#"
