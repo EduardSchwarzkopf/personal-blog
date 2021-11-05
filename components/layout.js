@@ -8,7 +8,7 @@ export default function Layout({ preview, children }) {
       <Meta />
       <Sidebar>
         <div className="min-h-screen">
-          <main>{children}</main>
+          <main className="mt-40">{children}</main>
         </div>
       </Sidebar>
       <Footer />
