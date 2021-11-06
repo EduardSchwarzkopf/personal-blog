@@ -1,5 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import {
+  BookmarkIcon,
   ExternalLinkIcon,
   GitHubIcon,
   HomeIcon,
@@ -20,11 +21,19 @@ export default function SidebarNavigation() {
     },
 
     {
-      label: "Posts",
+      label: "Beiträge",
       icon: PostsIcon,
       href: "/posts",
       trailingAccessory: null,
       isActive: router.asPath.indexOf("/posts") >= 0,
+    },
+
+    {
+      label: "Lesezeichen",
+      icon: BookmarkIcon,
+      href: "/",
+      trailingAccessory: null,
+      isActive: router.asPath.indexOf("/bookmarks") >= 0,
     },
 
     "Social",

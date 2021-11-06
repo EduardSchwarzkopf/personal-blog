@@ -13,3 +13,20 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+
+html {
+  @apply text-accents-5;
+}
+
+a {
+  @apply duration-200 ease-in;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-hl-color;
+}
