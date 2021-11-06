@@ -4,7 +4,7 @@ export default function Index() {
   return (
     <>
       <Layout>
-        <div>AAAAAAAAAAAAAAAAAAAAAaa</div>
+        <div>AAAAAAAAAAAAAAAAAAAAAAA</div>
       </Layout>
     </>
   );

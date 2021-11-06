@@ -1,7 +1,7 @@
-import DateFormatter from '../components/date-formatter'
-import PostTitle from '../components/post-title'
+import DateFormatter from "../components/date-formatter";
+import PostTitle from "../components/post-title";
 
-export default function PostHeader({ title, coverImage, date, author }) {
+export default function PostHeader({ title, date }) {
   return (
     <>
       <PostTitle>{title}</PostTitle>
@@ -11,5 +11,5 @@ export default function PostHeader({ title, coverImage, date, author }) {
         </div>
       </div>
     </>
-  )
+  );
 }
