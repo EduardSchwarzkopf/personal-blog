@@ -8,10 +8,13 @@ const truncate = (content, limit = 20) => {
   return content;
 };
 
-export default ({ title, description, href, as, date }) => {
+export default ({ title, description, href, as, date, isActive }) => {
+  const activeBackground = isActive ? "bg-gray-100" : null;
   return (
     <Link href={href} as={as}>
-      <a className="flex py-3 lg:py-2 px-3.5 space-x-3 border-b lg:border-none border-gray-100  text-sm">
+      <a
+        className={`flex py-3 lg:py-2 px-3.5 space-x-3 border-b lg:border-none border-gray-100 text-sm ${activeBackground}`}
+      >
         <div className="flex flex-col justify-center space-y-1">
           <div className="font-medium line-clamp-3 text-gray-1000 dark:text-gray-100">
             {title}

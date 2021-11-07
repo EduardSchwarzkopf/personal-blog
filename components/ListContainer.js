@@ -10,6 +10,7 @@ export default ({ list }) => {
           as={`/posts/${post.slug}`}
           title={post.title}
           description={post.excerpt}
+          isActive={post.active}
         />
       ))}
     </div>

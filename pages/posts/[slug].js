@@ -35,7 +35,13 @@ export default function Post({ post, allPosts }) {
 
 export async function getStaticProps({ params }) {
   const allPosts = getAllPosts(["title", "date", "slug", "content", "excerpt"]);
-  let post = allPosts.find((post) => `${post.slug}` === params.slug);
+  let post = allPosts.find((post) => {
+    if (`${post.slug}` === params.slug) {
+      post.active = true;
+      return post;
+    }
+    return null;
+  });
 
   if (post) {
     post.content = await markdownToHtml(post.content);
