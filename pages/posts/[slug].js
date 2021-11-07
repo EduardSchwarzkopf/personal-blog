@@ -3,17 +3,18 @@ import ErrorPage from "next/error";
 import PostBody from "../../components/post-body";
 import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
+import { getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import markdownToHtml from "../../lib/markdownToHtml";
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, allPosts }) {
   const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
+    <Layout list={allPosts}>
       {router.isFallback ? (
         <PostTitle>Loading…</PostTitle>
       ) : (
@@ -33,24 +34,17 @@ export default function Post({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
-    "title",
-    "date",
-    "slug",
-    "author",
-    "content",
-    "ogImage",
-    "coverImage",
-  ]);
-  const content = await markdownToHtml(post.content || "");
+  const allPosts = getAllPosts(["title", "date", "slug", "content", "excerpt"]);
+  let post = allPosts.find((post) => `${post.slug}` === params.slug);
+
+  if (post) {
+    post.content = await markdownToHtml(post.content);
+  } else {
+    post = null;
+  }
 
   return {
-    props: {
-      post: {
-        ...post,
-        content,
-      },
-    },
+    props: { post: post, allPosts: allPosts },
   };
 }
 
