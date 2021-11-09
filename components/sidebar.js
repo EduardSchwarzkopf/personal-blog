@@ -58,7 +58,7 @@ export default function SidebarNavigation() {
 
   // -translate-x-full for mobile menu
   return (
-    <nav className="fixed inset-y-0 left-0 translate-x-0 shadow-lg lg:relative flex flex-none flex-col lg:translate-x-0 w-3/4 sm:w-1/2 md:w-80 lg:w-96 2xl:w-72 3xl:w-80 z-30 lg:z-auto max-h-screen h-full min-h-screen overflow-y-auto transition duration-200 ease-in-out transform bg-white border-r pb-10 sm:pb-0 border-gray-150">
+    <nav className="fixed inset-y-0 left-0 translate-x-0 lg:relative flex flex-none flex-col lg:translate-x-0 w-3/4 sm:w-1/2 md:w-80 lg:w-96 2xl:w-72 3xl:w-80 z-30 lg:z-auto min-h-screen overflow-y-auto transition duration-200 ease-in-out transform bg-white border-r pb-10 sm:pb-0 border-gray-150">
       <div className="flex mt-4 ml-4">
         <h1 className="text-1xl font-bold">Eduard</h1>
       </div>
