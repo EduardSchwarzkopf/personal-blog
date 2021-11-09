@@ -9,6 +9,7 @@ export default ({ list }) => {
           href="/posts/[slug]"
           as={`/posts/${post.slug}`}
           title={post.title}
+          date={post.date}
           description={post.excerpt}
           isActive={post.active}
         />
