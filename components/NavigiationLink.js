@@ -17,8 +17,8 @@ export function NavigationLink({
         <a
           target={isExternal ? "_blank" : undefined}
           rel={isExternal ? "noopener noreferrer" : undefined}
-          className={`flex flex-1 space-x-3 px-2 py-1.5 text-sm font-medium ${
-            isActive ? "text-hl-color" : "text-accents-3 hover:text-hl-color"
+          className={`flex flex-1 space-x-3 px-2 py-1.5 text-sm font-medium text-hl-color rounded-md hover:bg-gray-100 ${
+            isActive ? "bg-gray-100" : null
           }`}
         >
           <span className="flex items-center justify-center">
