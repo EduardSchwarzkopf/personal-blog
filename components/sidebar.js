@@ -31,7 +31,7 @@ export default function SidebarNavigation() {
     {
       label: "Lesezeichen",
       icon: BookmarkIcon,
-      href: "/",
+      href: "/bookmarks",
       trailingAccessory: null,
       isActive: router.asPath.indexOf("/bookmarks") >= 0,
     },

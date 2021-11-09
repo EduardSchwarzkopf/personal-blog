@@ -9,19 +9,27 @@ const truncate = (content, limit = 20) => {
   return content;
 };
 
-export default ({ title, description, href, as, date, isActive }) => {
+export default ({
+  title,
+  description,
+  href,
+  as,
+  isExternal,
+  date,
+  isActive,
+}) => {
   const activeBackgroundColor = "bg-gray-100";
   const activeBackground = isActive ? activeBackgroundColor : null;
+  const dateString = date ? <DateFormatter dateString={date} /> : null;
   return (
-    <Link href={href} as={as}>
+    <Link href={href} as={as} rel={isExternal ? "noopener, noreferrer" : ""}>
       <a
+        target={isExternal ? "_blank" : ""}
         className={`flex py-3 lg:py-2 px-3.5 border-b lg:border-none rounded-md hover:${activeBackgroundColor} m-2 text-sm ${activeBackground}`}
       >
         <div className="flex flex-col justify-center">
           <div className="font-medium">{title}</div>
-          <div className="text-accents-3">
-            <DateFormatter dateString={date} />
-          </div>
+          <div className="text-accents-3">{dateString}</div>
           <div className="">{truncate(description)}</div>
         </div>
       </a>
