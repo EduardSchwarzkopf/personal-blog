@@ -16,7 +16,6 @@ export default ({ list }) => {
           asUrl = postPrefix + "/" + item.slug;
           isExternal = false;
         }
-        console.log("href:", href);
         return (
           <ListItem
             key={item.slug}

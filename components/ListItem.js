@@ -22,9 +22,10 @@ export default ({
   const activeBackground = isActive ? activeBackgroundColor : null;
   const dateString = date ? <DateFormatter dateString={date} /> : null;
   return (
-    <Link href={href} as={as} rel={isExternal ? "noopener, noreferrer" : ""}>
+    <Link href={href} as={as}>
       <a
         target={isExternal ? "_blank" : ""}
+        rel={isExternal ? "noopener, noreferrer" : ""}
         className={`flex py-3 lg:py-2 px-3.5 border-b lg:border-none rounded-md hover:${activeBackgroundColor} m-2 text-sm ${activeBackground}`}
       >
         <div className="flex flex-col justify-center">
