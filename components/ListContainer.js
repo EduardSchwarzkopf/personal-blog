@@ -1,5 +1,6 @@
 import ListItem from "./ListItem";
 import { useRouter } from "next/router";
+import ListContainerHeader from "./ListContainerHeader";
 
 export default ({ list }) => {
   const router = useRouter();
@@ -7,6 +8,7 @@ export default ({ list }) => {
   const postPrefix = "/posts";
   return (
     <div className="relative flex-none w-full min-h-screen overflow-y-auto bg-white border-r border-gray-150 md:w-80 xl:w-96">
+      <ListContainerHeader label={/* TODO: Add generic label */ ""} />
       {list.map((item) => {
         let href, asUrl;
         href = asUrl = item.href;

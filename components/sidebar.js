@@ -1,5 +1,4 @@
 import { useRouter } from "next/dist/client/router";
-import { useToggle } from "../lib/useHooks";
 import {
   BookmarkIcon,
   ExternalLinkIcon,
@@ -9,10 +8,12 @@ import {
   TwitterIcon,
 } from "./Icon";
 import { NavigationLink } from "./NavigiationLink";
+import { useNavigation } from "./Providers/NavigationContext";
+import ToggleMenuButton from "./ToggleMenuButton";
 
 export default function SidebarNavigation() {
   const router = useRouter();
-  const [toggle, setToggle] = useToggle(false);
+  const { isOpen } = useNavigation();
   const links = [
     {
       label: "Home",
@@ -58,26 +59,17 @@ export default function SidebarNavigation() {
     },
   ];
 
-  const handleToggle = () => {
-    setToggle((prevToggle) => !prevToggle);
-  };
-
-  // -translate-x-full for mobile menu
   return (
     <nav
       className={`fixed ${
-        toggle ? "-translate-x-full" : null
+        isOpen ? null : "-translate-x-full"
       } inset-y-0 left-0 translate-x-0 lg:relative flex flex-none flex-col lg:translate-x-0 w-3/4 sm:w-1/2 md:w-80 lg:w-96 2xl:w-72 3xl:w-80 z-30 lg:z-auto min-h-screen overflow-y-auto transition duration-200 ease-in-out transform bg-white border-r pb-10 sm:pb-0 border-gray-150`}
     >
-      <div className="flex mt-4 ml-4">
+      <div className="flex mt-4 ml-4 space-x-2 items-center">
+        <ToggleMenuButton />
         <h1 className="text-1xl font-bold">Eduard</h1>
       </div>
-      <button
-        onClick={handleToggle}
-        className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
-      >
-        Button
-      </button>
+
       <ul className="flex-1 px-3 py-3 space-y-1">
         {links.map((link, i) => {
           if (typeof link === "string") {
