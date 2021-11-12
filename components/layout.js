@@ -5,7 +5,7 @@ import Sidebar from "./sidebar";
 import { NavigtionProvider } from "./Providers/NavigationContext";
 import ToggleMenuButton from "./ToggleMenuButton";
 
-export default function Layout({ children, list }) {
+export default function Layout({ children, list, label }) {
   return (
     <>
       <Meta />
@@ -16,7 +16,7 @@ export default function Layout({ children, list }) {
             <div className="flex flex-1">
               <div className="flex w-full">
                 {list ? (
-                  <ListContainer list={list} />
+                  <ListContainer list={list} label={label} />
                 ) : (
                   <div className="sticky top-0 z-10 flex items-center justify-between flex-none px-3 py-2 bg-white h-14 bg-opacity-90 filter-blur">
                     <ToggleMenuButton />

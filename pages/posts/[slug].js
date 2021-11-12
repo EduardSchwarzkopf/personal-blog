@@ -27,7 +27,7 @@ export default function Post({ post, allPosts }) {
           </Link>
         </TitleBar>
       </div>
-      <Layout list={allPosts}>
+      <Layout list={allPosts} label="Beiträge">
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (

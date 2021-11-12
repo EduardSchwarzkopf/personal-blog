@@ -1,10 +1,11 @@
 import Layout from "../components/layout";
 import { getAllPosts } from "../lib/api";
+import { LABEL_POSTS } from "../lib/constants";
 
 export default function Index({ allPosts }) {
   return (
     <>
-      <Layout list={allPosts}></Layout>
+      <Layout list={allPosts} label={LABEL_POSTS}></Layout>
     </>
   );
 }
