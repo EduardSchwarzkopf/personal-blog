@@ -35,9 +35,11 @@ export default ({ list, label }) => {
     </div>
   );
 
+  const showListContainerOnMobile = path.split("/").length === 2;
+
   return (
     <>
-      {path === postPrefix ? (
+      {showListContainerOnMobile ? (
         innerContent
       ) : (
         <div className="hidden md:flex">{innerContent}</div>
