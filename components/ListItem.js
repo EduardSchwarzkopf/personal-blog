@@ -21,6 +21,7 @@ export default ({
   const activeBackgroundColor = "bg-gray-100";
   const activeBackground = isActive ? activeBackgroundColor : null;
   const dateString = date ? <DateFormatter dateString={date} /> : null;
+
   return (
     <Link href={href} as={as}>
       <a

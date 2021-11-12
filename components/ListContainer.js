@@ -6,7 +6,8 @@ export default ({ list }) => {
   const router = useRouter();
   const path = router.asPath;
   const postPrefix = "/posts";
-  return (
+
+  const innerContent = (
     <div className="relative flex-none w-full min-h-screen overflow-y-auto bg-white border-r border-gray-150 md:w-80 xl:w-96">
       <ListContainerHeader label={/* TODO: Add generic label */ ""} />
       {list.map((item) => {
@@ -32,5 +33,15 @@ export default ({ list }) => {
         );
       })}
     </div>
+  );
+
+  return (
+    <>
+      {path === postPrefix ? (
+        innerContent
+      ) : (
+        <div className="hidden md:flex">{innerContent}</div>
+      )}
+    </>
   );
 };
