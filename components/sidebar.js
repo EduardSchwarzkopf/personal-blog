@@ -61,7 +61,7 @@ export default function SidebarNavigation() {
 
   return (
     <nav
-      className={`fixed ${
+      className={`absolute ${
         isOpen ? null : "-translate-x-full"
       } inset-y-0 left-0 translate-x-0 lg:relative flex flex-none flex-col lg:translate-x-0 w-3/4 sm:w-1/2 md:w-80 lg:w-96 2xl:w-72 3xl:w-80 z-30 lg:z-auto min-h-screen overflow-y-auto transition duration-200 ease-in-out transform bg-white border-r pb-10 sm:pb-0 border-gray-150`}
     >
