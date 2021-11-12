@@ -16,7 +16,13 @@ export default function Layout({ children, list }) {
             <div className="flex flex-1">
               <div className="flex w-full">
                 <div className="hidden md:flex">
-                  {list ? <ListContainer list={list} /> : <ToggleMenuButton />}
+                  {list ? (
+                    <ListContainer list={list} />
+                  ) : (
+                    <div className="sticky top-0 z-10 flex items-center justify-between flex-none px-3 py-2 bg-white h-14 bg-opacity-90 filter-blur">
+                      <ToggleMenuButton />
+                    </div>
+                  )}
                   <div className="relative flex flex-col w-full max-h-screen overflow-y-auto bg-white dark:bg-black">
                     <div className="p-4" />
                     <main className="w-full max-w-3xl px-4 py-8 pb-10 mx-auto md:px-8">
