@@ -11,6 +11,7 @@ import {
 import { NavigationLink } from "./NavigiationLink";
 import { useNavigation } from "./Providers/NavigationContext";
 import ToggleMenuButton from "./ToggleMenuButton";
+import { LABEL_BOOKMARK, LABEL_POSTS } from "../lib/constants";
 
 export default function SidebarNavigation() {
   const router = useRouter();
@@ -25,7 +26,7 @@ export default function SidebarNavigation() {
     },
 
     {
-      label: "Beiträge",
+      label: LABEL_POSTS,
       icon: PostsIcon,
       href: "/posts",
       trailingAccessory: null,
@@ -33,7 +34,7 @@ export default function SidebarNavigation() {
     },
 
     {
-      label: "Lesezeichen",
+      label: LABEL_BOOKMARK,
       icon: BookmarkIcon,
       href: "/bookmarks",
       trailingAccessory: null,
