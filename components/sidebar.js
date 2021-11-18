@@ -4,6 +4,7 @@ import {
   ExternalLinkIcon,
   GitHubIcon,
   HomeIcon,
+  Logo,
   PostsIcon,
   TwitterIcon,
 } from "./Icon";
@@ -67,7 +68,10 @@ export default function SidebarNavigation() {
     >
       <div className="flex mt-4 ml-4 space-x-2 items-center">
         <ToggleMenuButton />
-        <h1 className="text-1xl font-bold">Eduard</h1>
+        <span className="flex text-primary items-center justify-center">
+          <Logo />
+        </span>
+        <span className="flex-1 text-black text-1xl font-bold">Eduard</span>
       </div>
 
       <ul className="flex-1 px-3 py-3 space-y-1">
