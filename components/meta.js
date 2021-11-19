@@ -27,7 +27,7 @@ export default function Meta() {
         href="/favicons/safari-pinned-tab.svg"
         color="#000000"
       />
-      <link rel="shortcut icon" href="/static/favicon.ico" />
+      <link rel="shortcut icon" href="/favicons/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
