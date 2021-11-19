@@ -156,13 +156,13 @@ export default function Index() {
               <SectionTitle>Work</SectionTitle>
               <SectionContent>
                 <div className="flex flex-col space-y-3">
-                  {workHistory.map((job) => (
+                  {workHistory.map((job, i) => (
                     <TableRow
                       href={job.href}
                       title={job.title}
                       subtitle={job.subtitle}
                       date={job.date}
-                      key={job.href}
+                      key={i}
                     />
                   ))}
                 </div>
@@ -172,11 +172,11 @@ export default function Index() {
               <SectionTitle>Skills</SectionTitle>
               <SectionContent>
                 <div className="flex flex-col space-y-3">
-                  {skillSet.map((skill) => (
+                  {skillSet.map((skill, i) => (
                     <TableRow
                       title={skill.title}
                       subtitle={skill.subtitle}
-                      key={skill.title}
+                      key={i}
                     />
                   ))}
                 </div>
