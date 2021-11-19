@@ -79,7 +79,6 @@ export default function SidebarNavigation() {
         </span>
         <span className="flex-1 text-black text-1xl font-bold">Eduard</span>
       </div>
-
       <ul className="flex-1 px-3 py-3 space-y-1">
         {links.map((link, i) => {
           if (typeof link === "string") {
@@ -96,6 +95,18 @@ export default function SidebarNavigation() {
           return <NavigationLink key={i} link={link} />;
         })}
       </ul>
+      <div className="text-center text-xs text-accents-3 mb-5">
+        <p>
+          powered by{" "}
+          <a
+            href="https://github.com/brianlovin/briOS"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            briOS
+          </a>
+        </p>
+      </div>
     </nav>
   );
 }
