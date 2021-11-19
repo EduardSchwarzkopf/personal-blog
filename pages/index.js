@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import { GITHUB_USERNAME, TWITTER_USERNAME } from "../lib/constants";
 
 function SectionTitle(props) {
   return (
@@ -21,9 +22,7 @@ function TableRow({ href, title, subtitle, date }) {
       href={href}
       className="flex items-center space-x-4 group"
     >
-      <span className="flex-none font-medium text-gray-1000 group-hover:underline group-hover:text-blue-600 dark:group-hover:text-blue-500 dark:text-gray-100">
-        {title}
-      </span>
+      <span className="flex-none font-medium text-gray-1000">{title}</span>
       <span className="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
       {subtitle && <span className="flex-none text-tertiary">{subtitle}</span>}
       {date && (
@@ -42,36 +41,70 @@ function SectionContainer(props) {
   );
 }
 
+const externalLink = (label, url) => {
+  return (
+    <a href={url} rel="noopener noreferrer" target="_blank">
+      {label}
+    </a>
+  );
+};
+
+const skillSetCategory = {
+  programming: "Programming",
+  design: "Design",
+  language: "Language",
+};
+
+const skillSet = [
+  {
+    title: "Python",
+    subtitle: skillSetCategory.programming,
+  },
+  {
+    title: "PHP",
+    subtitle: skillSetCategory.programming,
+  },
+  {
+    title: "JavaScript",
+    subtitle: skillSetCategory.programming,
+  },
+  {
+    title: "Logodesign",
+    subtitle: skillSetCategory.design,
+  },
+  {
+    title: "Media Design",
+    subtitle: skillSetCategory.design,
+  },
+  {
+    title: "German",
+    subtitle: skillSetCategory.language,
+  },
+  {
+    title: "English",
+    subtitle: skillSetCategory.language,
+  },
+  {
+    title: "Russian",
+    subtitle: skillSetCategory.language,
+  },
+];
+
 const workHistory = [
   {
-    href: "https://github.com/mobile",
-    title: "GitHub",
-    subtitle: "Product Designer",
-    date: "2018—\u00a0\u00a0",
+    title: "wrkbeat GmbH",
+    subtitle: "Trainee",
+    date: "2019—\u00a0\u00a0",
   },
   {
-    href: "https://designdetails.fm",
-    title: "Design Details Podcast",
-    subtitle: "Co-host",
-    date: "2014—\u00a0\u00a0",
+    title: "Media Designer",
+    subtitle: "Self-Employed",
+    date: "2016—2019",
   },
   {
-    href: "https://github.com/withspectrum/spectrum",
-    title: "Spectrum.chat",
-    subtitle: "Co-founder",
-    date: "2017—18",
-  },
-  {
-    href: "https://facebook.com",
-    title: "Facebook",
-    subtitle: "Product Designer",
-    date: "2015—17",
-  },
-  {
-    href: "https://buffer.com",
-    title: "Buffer",
-    subtitle: "Product Designer",
-    date: "2013—15",
+    title: "Web Designer",
+    subtitle: "Self-Employed",
+    date: "2014—2016",
   },
 ];
 
@@ -83,7 +116,41 @@ export default function Index() {
           <div className="pb-24 space-y-8 md:space-y-16">
             <SectionContainer>
               <SectionTitle />
-              <SectionContent>UPPER CONTENT</SectionContent>
+              <SectionContent>
+                <div className="space-y-9">
+                  <p>
+                    Hey, I'm Eduard. I am a media designer, developer, husband
+                    and father. I am currently in an apprenticeship as a
+                    developer.
+                  </p>
+                  <p>
+                    Before that I was a self-employed media designer and helped
+                    my clients to give their companies a face. My focus was
+                    mainly on logos and print media.
+                  </p>
+                  <p>
+                    My interests in tech are still very far-reaching at the
+                    moment. I am very interested in web development, web 3.0,
+                    security and OSINT. Which area will be my favorite remains
+                    to be seen.
+                  </p>
+                  <p>
+                    On{" "}
+                    {externalLink(
+                      "Twitter",
+                      `https://twitter.com/${TWITTER_USERNAME}`
+                    )}{" "}
+                    I mainly chat with other developers about various topics and
+                    support where I can.{" "}
+                    {externalLink(
+                      "GitHub",
+                      `https://github.com/${GITHUB_USERNAME}`
+                    )}{" "}
+                    is mainly for my private repositories, so I'll be posting
+                    more publicly in the future.
+                  </p>
+                </div>
+              </SectionContent>
             </SectionContainer>
             <SectionContainer>
               <SectionTitle>Work</SectionTitle>
@@ -96,6 +163,20 @@ export default function Index() {
                       subtitle={job.subtitle}
                       date={job.date}
                       key={job.href}
+                    />
+                  ))}
+                </div>
+              </SectionContent>
+            </SectionContainer>
+            <SectionContainer>
+              <SectionTitle>Skills</SectionTitle>
+              <SectionContent>
+                <div className="flex flex-col space-y-3">
+                  {skillSet.map((skill) => (
+                    <TableRow
+                      title={skill.title}
+                      subtitle={skill.subtitle}
+                      key={skill.title}
                     />
                   ))}
                 </div>

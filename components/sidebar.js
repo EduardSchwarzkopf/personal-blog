@@ -11,7 +11,12 @@ import {
 import { NavigationLink } from "./NavigiationLink";
 import { useNavigation } from "./Providers/NavigationContext";
 import ToggleMenuButton from "./ToggleMenuButton";
-import { LABEL_BOOKMARK, LABEL_POSTS } from "../lib/constants";
+import {
+  TWITTER_USERNAME,
+  GITHUB_USERNAME,
+  LABEL_BOOKMARK,
+  LABEL_POSTS,
+} from "../lib/constants";
 
 export default function SidebarNavigation() {
   const router = useRouter();
@@ -46,7 +51,7 @@ export default function SidebarNavigation() {
     {
       label: "Twitter",
       icon: TwitterIcon,
-      href: "https://twitter.com/EduSchwarzkopf",
+      href: `https://twitter.com/${TWITTER_USERNAME}`,
       trailingAccessory: ExternalLinkIcon,
       isActive: false,
       isExternal: true,
@@ -54,7 +59,7 @@ export default function SidebarNavigation() {
     {
       label: "Github",
       icon: GitHubIcon,
-      href: "https://github.com/shinySonic",
+      href: `https://github.com/${GITHUB_USERNAME}`,
       trailingAccessory: ExternalLinkIcon,
       isActive: false,
       isExternal: true,
