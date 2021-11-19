@@ -14,6 +14,7 @@ export default ({ list, label }) => {
         let href, asUrl;
         href = asUrl = item.href;
         let isExternal = true;
+        let uniqueKey = item.slug ? item.slug : item.href;
         if (path.indexOf(postPrefix) >= 0) {
           href = postPrefix + "/[slug]";
           asUrl = postPrefix + "/" + item.slug;
@@ -21,7 +22,7 @@ export default ({ list, label }) => {
         }
         return (
           <ListItem
-            key={item.slug}
+            key={uniqueKey}
             href={href}
             as={asUrl}
             isExternal={isExternal}
