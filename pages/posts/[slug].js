@@ -9,6 +9,7 @@ import PostTitle from "../../components/post-title";
 import markdownToHtml from "../../lib/markdownToHtml";
 import { TimesIcon } from "../../components/Icon";
 import TitleBar from "../../components/TitleBar";
+import { LABEL_POSTS } from "../../lib/constants";
 
 export default function Post({ post, allPosts }) {
   const router = useRouter();
@@ -27,7 +28,7 @@ export default function Post({ post, allPosts }) {
           </Link>
         </TitleBar>
       </div>
-      <Layout list={allPosts} label="Beiträge">
+      <Layout list={allPosts} label={LABEL_POSTS}>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
