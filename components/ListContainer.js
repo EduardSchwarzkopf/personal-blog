@@ -8,7 +8,7 @@ export default ({ list, label }) => {
   const postPrefix = "/posts";
 
   const innerContent = (
-    <div className="relative flex-none w-full min-h-screen overflow-y-auto bg-white border-r border-gray-150 md:w-80 xl:w-96">
+    <div className="relative flex-none w-full h-full max-h-screen min-h-screen overflow-y-auto bg-white border-r border-gray-150 md:w-80 xl:w-96 dark:bg-gray-900 dark:border-gray-800">
       <ListContainerHeader label={label} />
       {list.map((item) => {
         let href, asUrl;
