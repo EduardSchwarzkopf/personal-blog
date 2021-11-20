@@ -4,7 +4,7 @@ import { GITHUB_USERNAME, TWITTER_USERNAME } from "../lib/constants";
 function SectionTitle(props) {
   return (
     <p
-      className="col-span-2 pt-8 text-lg font-extrabold text-black dark:text-white md:font-normal md:text-base md:pt-0 md:text-right md:text-opacity-40"
+      className="col-span-2 pt-8 text-lg font-extrabold text-black md:font-normal md:text-base md:pt-0 md:text-right md:text-opacity-40"
       {...props}
     />
   );
@@ -39,7 +39,7 @@ function TableRow({ href, title, subtitle, date }) {
 function SectionContainer(props) {
   return (
     <div
-      className="grid items-start grid-cols-1 gap-6 md:grid-cols-12"
+      className="grid items-start grid-cols-1 gap-6 md:grid-cols-12 mb-10"
       {...props}
     />
   );
