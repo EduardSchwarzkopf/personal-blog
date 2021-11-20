@@ -24,7 +24,11 @@ function TableRow({ href, title, subtitle, date }) {
     >
       <span className="flex-none font-medium text-gray-1000">{title}</span>
       <span className="flex-shrink w-full border-t border-gray-300 border-dashed dark:border-gray-800" />
-      {subtitle && <span className="flex-none text-tertiary">{subtitle}</span>}
+      {subtitle && (
+        <span className="flex-none text-tertiary text-sm md:text-base">
+          {subtitle}
+        </span>
+      )}
       {date && (
         <span className="flex-none font-mono text-quaternary">{date}</span>
       )}
@@ -99,12 +103,12 @@ const workHistory = [
   {
     title: "Media Designer",
     subtitle: "Self-Employed",
-    date: "2016—2019",
+    date: "2016—19",
   },
   {
     title: "Web Designer",
     subtitle: "Self-Employed",
-    date: "2014—2016",
+    date: "2014—16",
   },
 ];
 
@@ -112,78 +116,72 @@ export default function Index() {
   return (
     <>
       <Layout>
-        <div className="w-full max-w-3xl px-4 py-8 pb-10 mx-auto md:px-8">
-          <div className="pb-24 space-y-8 md:space-y-16">
-            <SectionContainer>
-              <SectionTitle />
-              <SectionContent>
-                <div className="space-y-9">
-                  <p>
-                    Hey, I'm Eduard. I am a media designer, developer, husband
-                    and father. I am currently in an apprenticeship as a
-                    developer.
-                  </p>
-                  <p>
-                    Before that I was a self-employed media designer and helped
-                    my clients to give their companies a face. My focus was
-                    mainly on logos and print media.
-                  </p>
-                  <p>
-                    My interests in tech are still very far-reaching at the
-                    moment. I am very interested in web development, web 3.0,
-                    security and OSINT. Which area will be my favorite remains
-                    to be seen.
-                  </p>
-                  <p>
-                    On{" "}
-                    {externalLink(
-                      "Twitter",
-                      `https://twitter.com/${TWITTER_USERNAME}`
-                    )}{" "}
-                    I mainly chat with other developers about various topics and
-                    support where I can.{" "}
-                    {externalLink(
-                      "GitHub",
-                      `https://github.com/${GITHUB_USERNAME}`
-                    )}{" "}
-                    is mainly for my private repositories, so I'll be posting
-                    more publicly in the future.
-                  </p>
-                </div>
-              </SectionContent>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionTitle>Work</SectionTitle>
-              <SectionContent>
-                <div className="flex flex-col space-y-3">
-                  {workHistory.map((job, i) => (
-                    <TableRow
-                      href={job.href}
-                      title={job.title}
-                      subtitle={job.subtitle}
-                      date={job.date}
-                      key={i}
-                    />
-                  ))}
-                </div>
-              </SectionContent>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionTitle>Skills</SectionTitle>
-              <SectionContent>
-                <div className="flex flex-col space-y-3">
-                  {skillSet.map((skill, i) => (
-                    <TableRow
-                      title={skill.title}
-                      subtitle={skill.subtitle}
-                      key={i}
-                    />
-                  ))}
-                </div>
-              </SectionContent>
-            </SectionContainer>
-          </div>
-        </div>
+        <SectionContainer>
+          <SectionTitle />
+          <SectionContent>
+            <div className="space-y-9">
+              <p>
+                Hey, I'm Eduard. I am a media designer, developer, husband and
+                father. I am currently in an apprenticeship as a developer.
+              </p>
+              <p>
+                Before that I was a self-employed media designer and helped my
+                clients to give their companies a face. My focus was mainly on
+                logos and print media.
+              </p>
+              <p>
+                My interests in tech are still very far-reaching at the moment.
+                I am very interested in web development, web 3.0, security and
+                OSINT. Which area will be my favorite remains to be seen.
+              </p>
+              <p>
+                On{" "}
+                {externalLink(
+                  "Twitter",
+                  `https://twitter.com/${TWITTER_USERNAME}`
+                )}{" "}
+                I mainly chat with other developers about various topics and
+                support where I can.{" "}
+                {externalLink(
+                  "GitHub",
+                  `https://github.com/${GITHUB_USERNAME}`
+                )}{" "}
+                is mainly for my private repositories, so I'll be posting more
+                publicly in the future.
+              </p>
+            </div>
+          </SectionContent>
+        </SectionContainer>
+        <SectionContainer>
+          <SectionTitle>Work</SectionTitle>
+          <SectionContent>
+            <div className="flex flex-col space-y-3">
+              {workHistory.map((job, i) => (
+                <TableRow
+                  href={job.href}
+                  title={job.title}
+                  subtitle={job.subtitle}
+                  date={job.date}
+                  key={i}
+                />
+              ))}
+            </div>
+          </SectionContent>
+        </SectionContainer>
+        <SectionContainer>
+          <SectionTitle>Skills</SectionTitle>
+          <SectionContent>
+            <div className="flex flex-col space-y-3">
+              {skillSet.map((skill, i) => (
+                <TableRow
+                  title={skill.title}
+                  subtitle={skill.subtitle}
+                  key={i}
+                />
+              ))}
+            </div>
+          </SectionContent>
+        </SectionContainer>
       </Layout>
     </>
   );
