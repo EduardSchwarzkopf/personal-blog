@@ -5,12 +5,12 @@ import Sidebar from "./sidebar";
 import { NavigtionProvider } from "./Providers/NavigationContext";
 import ToggleMenuButton from "./ToggleMenuButton";
 
-export default function Layout({ children, list, label }) {
-  const mainContent = (
-    <div className="w-full max-w-3xl px-4 py-8 pb-10 mx-auto md:px-8">
-      {children}
-    </div>
-  );
+export default function Layout({
+  children,
+  list,
+  label,
+  toggleMenuVisible = true,
+}) {
   return (
     <>
       <Meta />
@@ -23,16 +23,14 @@ export default function Layout({ children, list, label }) {
                 {list ? (
                   <>
                     <ListContainer list={list} label={label} />
-                    {mainContent}
                   </>
-                ) : (
-                  <>
-                    <div className="relative flex flex-col w-full max-h-screen overflow-y-auto bg-white">
-                      <ToggleMenuButton />
-                      {mainContent}
-                    </div>
-                  </>
-                )}
+                ) : null}
+                <div className="relative flex flex-col w-full max-h-screen overflow-y-auto bg-white">
+                  {toggleMenuVisible ? <ToggleMenuButton /> : null}
+                  <div className="w-full max-w-3xl px-4 py-8 pb-10 mx-auto md:px-8">
+                    {children}
+                  </div>
+                </div>
               </div>
             </div>
             <Footer />

@@ -28,7 +28,7 @@ export default function Post({ post, allPosts }) {
           </Link>
         </TitleBar>
       </div>
-      <Layout list={allPosts} label={LABEL_POSTS}>
+      <Layout list={allPosts} label={LABEL_POSTS} toggleMenuVisible={false}>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
