@@ -13,7 +13,7 @@ export default function Layout({
 }) {
   return (
     <>
-      <Meta />
+      <Meta label={label} />
       <div className="relative flex w-full h-full min-h-screen">
         <NavigtionProvider>
           <Sidebar />
