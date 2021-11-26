@@ -6,7 +6,7 @@ date: "2021-11-22"
 
 In search of better working techniques, I recently came across a video that dealt with this topic. Basically, many points were mentioned there, which were also mentioned everywhere else. However, I noticed an important point that I have not heard anywhere else before.
 
-## To much to do
+## Too much to do
 
 [According to one statistic](https://www.huffpost.com/entry/forty-one-percent-of-tasks-on-to-do-lists-are-never-done_b_9308978), 40% of the things on a to-do list don't get done. I found this number quite scary, because almost half of the things I probably want to get done, I will not get done on average. What could possibly be the reason for this?
 
