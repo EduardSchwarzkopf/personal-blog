@@ -1,4 +1,6 @@
+import { NextSeo } from "next-seo";
 import Layout from "../components/layout";
+import routes from "../config/routes";
 import { getAllPosts } from "../lib/api";
 import { LABEL_POSTS } from "../lib/constants";
 

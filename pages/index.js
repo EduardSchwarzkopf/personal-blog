@@ -1,3 +1,4 @@
+import { NextSeo } from "next-seo";
 import Layout from "../components/layout";
 import routes from "../config/routes";
 import { GITHUB_USERNAME, TWITTER_USERNAME } from "../lib/constants";
