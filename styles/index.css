@@ -23,7 +23,7 @@ a {
 }
 
 p a {
-  @apply border-b-2 font-bold pb-1;
+  @apply border-b-2 pb-1;
 }
 
 h1,
@@ -42,4 +42,8 @@ h6 {
 pre,
 p code {
   @apply rounded bg-gray-100 p-5 whitespace-pre-line;
+}
+
+blockquote {
+  @apply italic border-l-4 pl-4 text-accents-4 rounded;
 }
