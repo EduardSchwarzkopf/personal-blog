@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import routes from "../config/routes";
 import { GITHUB_USERNAME, TWITTER_USERNAME } from "../lib/constants";
 
 function SectionTitle(props) {
@@ -115,6 +116,12 @@ const workHistory = [
 export default function Index() {
   return (
     <>
+      <NextSeo
+        title={routes.home.seo.title}
+        description={routes.home.seo.description}
+        openGraph={routes.home.seo.openGraph}
+      />
+
       <Layout>
         <SectionContainer>
           <SectionTitle />

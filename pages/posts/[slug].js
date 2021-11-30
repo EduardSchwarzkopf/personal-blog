@@ -10,6 +10,9 @@ import markdownToHtml from "../../lib/markdownToHtml";
 import { TimesIcon } from "../../components/Icon";
 import TitleBar from "../../components/TitleBar";
 import { LABEL_POSTS } from "../../lib/constants";
+import { NextSeo } from "next-seo";
+import { baseUrl } from "/config/seo";
+import routes from "/config/routes";
 
 export default function Post({ post, allPosts }) {
   const router = useRouter();
@@ -17,6 +20,7 @@ export default function Post({ post, allPosts }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <>
       <div className="md:hidden">
@@ -28,6 +32,23 @@ export default function Post({ post, allPosts }) {
           </Link>
         </TitleBar>
       </div>
+
+      <NextSeo
+        title={post.title}
+        description={post.content}
+        openGraph={{
+          title: post.title,
+          url: `${baseUrl}/posts/${post.slug}`,
+          description: post.content,
+          images: [
+            {
+              url: routes.posts.seo.image,
+              alt: routes.posts.description,
+            },
+          ],
+        }}
+      />
+
       <Layout list={allPosts} label={LABEL_POSTS} toggleMenuVisible={false}>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
