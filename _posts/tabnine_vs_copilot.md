@@ -34,6 +34,9 @@ I've been using Tabnine for about a month now and I have to say it's terrific. W
 
 In the time I've been using Tabnine, I feel like I've been able to write faster.
 
+Here is an example of how easily you can write a whole function:  
+![Gif of how tabnine works](/assets/blog/tabnine_vs_copilot/tabnine_in_action.gif "Tabnine in Action")
+
 ## The comparison
 
 In direct comparison, both tools are amazing. Copilot shows an impressive look at where things are headed with the help of AI. However, it is still too immature in its current state. The reason here is three major problems which can’t make it work in a real environment.
@@ -43,7 +46,7 @@ One of those problems is privacy. For me, and probably for one or two others, th
 > **Is the transmitted data secure?**  
 > All data is transmitted and stored securely. Access to the telemetry is strictly limited to individuals on a need-to-know basis. Inspection of the gathered source code will be predominantly automatic, and when humans read it, it is specifically with the aim of improving the model or detecting abuse.
 
-<https://copilot.github.com/#faq-is-the-transmitted-data-secure>
+[Copilot FAQ](https://copilot.github.com/#faq-is-the-transmitted-data-secure){:target="\_blank"}
 
 This point alone will prevent some developers from starting Copilot. At least that is the case for me.
 
@@ -51,7 +54,7 @@ Here Tabnine has a better position than GitHub:
 
 > For work projects, staying compliant often means that code cannot leave your network. Tabnine works without sending any of your code to a cloud. You can easily run Tabnine locally, ensuring that no code or queries ever leave your local network.
 
-<https://www.tabnine.com>
+[Tabnine Homepage](https://www.tabnine.com){:target="\_blank"}
 
 Other problems that still exist with Copilot are:
 
