@@ -7,7 +7,7 @@ date: "2021-12-05"
 I wrote my blog in NextJs, so when it was ready to be put online, some questions came up first, such as where to host the project and how to get the app running.
 
 The choices were Vercel or my own server. I first tried to install it on my server, but it didn't work right away. For this reason, I then tried hosting at Vercel. The setup here was super easy and after setting the DNS correctly, my blog was online under the correct domain after a short time.
-Unfortunately, as I am, I couldn't let it go though and absolutely had to get the app running on my server as well. My stubbornness wins there unfortunately far too often. In the end I also have complete data control, but that's also just a good excuse for all the time I spent on the successful setup. You're probably here for the same reason, so I'm going to try to make this easier for you with this article. Let's get started.
+Unfortunately, as I am, I couldn't let it go though and absolutely had to get the app running on my server as well. I'm just stubborn. In the end I also have complete data control, but that's also just a good excuse for all the time I spent on the successful setup. You're probably here for the same reason, so I'm going to try to make this easier for you with this article. Let's get started.
 
 ## Getting started
 
@@ -27,21 +27,29 @@ The next step is to set up the Git repo. Click on the Git icon under the domain 
 
 Note: If your repository is private, you still need to use the SSH variant. Here the link usually starts with `git@GitHub.com:...`.
 Then copy the SSH public key from Plesk and add it to your profile: <https://GitHub.com/settings/keys>
-New key → Enter title → Paste key from Plesk under Key → Add SSH Key
 
-After that, you should drag your repository from GitHub to your server once.
+- New key
+- Enter title
+- Paste key from Plesk under Key
+- Add SSH Key
 
 After saving, we need to add deploy actions so that your app will be updated when pushed to your "main" branch.
-
 To do this, go to the Git settings and check "Enable additional deploy actions".
 In the field for actions put the following commands:
 
-"/opt/plesk/node/17/bin/npm ci --scripts-prepend-node-path
+```
+/opt/plesk/node/17/bin/npm ci --scripts-prepend-node-path
 /opt/plesk/node/17/bin/npm run build --scripts-prepend-node-path
-touch tmp/restart.txt"
+touch tmp/restart.txt
+```
 
 You can change the node version by replacing 17 with the version you need. You can see which versions are installed in Plesk under:
-Extensions → My Extensions tab → Node.js
+
+1. Extensions
+2. My Extensions tab
+3. Node.js
+
+Now pull your repository from GitHub to your server.
 
 ### NodeJs settings
 
@@ -199,10 +207,15 @@ If everything is set correctly, you should now be able to click the NPM install 
 
 ## GitHub
 
-Now you want to set up a webhook on GitHub to publish pushes to the `main` branch directly. You can find the link under Domain → Git → Repository Settings → Webhook URL.
+Now you want to set up a webhook on GitHub to publish pushes to the `main` branch directly. You can find the link under
 
-Now go to your repository on GitHub. There is under the settings → Webhooks tab. Click the button. Paste here the copied link under `Payload URL`.
-Content-Type is `application/json`. The rest can stay as it is.
+1. Domain
+2. Git
+3. Repository Settings
+4. Webhook URL.
+
+Now go to your repository on GitHub. `Settings` Tab >> `Webhooks`. Add the button `Add Webhook`. Paste the copied link under `Payload URL`.
+Content-Type is `application/json`. Leave the rest as it is.
 
 ## Conlcusion
 
