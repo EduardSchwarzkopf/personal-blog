@@ -41,7 +41,11 @@ h6 {
 
 pre,
 p code {
-  @apply rounded bg-gray-100 p-5 whitespace-pre-line;
+  @apply rounded bg-gray-100 p-1 whitespace-pre-line;
+}
+
+pre {
+  @apply p-5;
 }
 
 blockquote {
