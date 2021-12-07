@@ -7,6 +7,7 @@ import Layout from "../../components/layout";
 import { getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import markdownToHtml from "../../lib/markdownToHtml";
+import { serialize } from "next-mdx-remote/serialize";
 import { TimesIcon } from "../../components/Icon";
 import TitleBar from "../../components/TitleBar";
 import { LABEL_POSTS } from "../../lib/constants";
@@ -80,7 +81,7 @@ export async function getStaticProps({ params }) {
   });
 
   if (post) {
-    post.content = await markdownToHtml(post.content);
+    post.content = await serialize(post.content);
   } else {
     post = null;
   }
