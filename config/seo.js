@@ -1,7 +1,7 @@
 export const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://eduard.schwarzkopf.center"
-    : "";
+    : "localhost";
 export const baseEmail = "eduard@schwarzkopf.center";
 
 export const defaultSEO = {
