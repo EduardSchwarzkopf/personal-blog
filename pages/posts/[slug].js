@@ -6,7 +6,6 @@ import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
 import { getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
-import markdownToHtml from "../../lib/markdownToHtml";
 import { serialize } from "next-mdx-remote/serialize";
 import { TimesIcon } from "../../components/Icon";
 import TitleBar from "../../components/TitleBar";
