@@ -1,5 +1,6 @@
 import { MDXRemote } from "next-mdx-remote";
-const components = {};
+import { PageLink } from "./PageLink";
+const components = { PageLink };
 
 export default function PostBody({ content }) {
   return (
