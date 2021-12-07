@@ -1,0 +1,12 @@
+---
+title: "The Beginner Mega Tutorial - Part 1: Roadmap"
+excerpt: "ADD EXCERPT HERE"
+date: "2021-12-07"
+---
+
+- Dies ist mein Setup, feedback gerne gesehen
+- Für wen ist dieses Tutorial: Für alle, die mit dem Programmieren starten wollen, aber nicht wissen wo sie anfangen sollen.
+- Vorraussetzungen: Basiswissen für Computer, Grundkenntnisse in HTML (https://www.w3schools.com/html/), CSS
+- Stack: VSCode, Python, Jupyter Notebook, PIP, JavaScript
+- Programmiersprachen die genutzt werden: Python und Javascript - Grund: Meist verwendet, einfach zu nutzen, man sieht direkt Ergebnisse
+- Warum nutzt du nicht XYZ instead? Weil ich mein Setup teile und mit XYZ noch keine große Erfahrung gemacht habe, um es ordentlich für einen Anfänger beizubringen.
