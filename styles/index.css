@@ -28,6 +28,10 @@ p a {
   @apply border-b-2 pb-1;
 }
 
+a:hover {
+  @apply text-accents-8;
+}
+
 h1,
 h2,
 h3,
