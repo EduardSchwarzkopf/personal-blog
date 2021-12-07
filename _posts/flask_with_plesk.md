@@ -6,7 +6,7 @@ date: "2020-01-26"
 
 I wanted to install my flask app on my plesk server. This was not as easy as I initially expected, so I am recording my steps here so that this might help someone else if necessary.
 
-In the first step, make sure you have nginx installed. You can find instructions [here](https://support.plesk.com/hc/en-us/articles/213944825-How-to-install-and-enable-nginx-reverse-proxy-on-a-Plesk-for-Linux-server).
+In the first step, make sure you have nginx installed. You can find instructions <PageLink url="https://support.plesk.com/hc/en-us/articles/213944825-How-to-install-and-enable-nginx-reverse-proxy-on-a-Plesk-for-Linux-server">here</PageLink>.
 
 ## Hosting settings
 
@@ -96,5 +96,5 @@ sudo systemctl enable gunicorn.service
 
 ## Usefull resouces
 
-- <https://medium.com/@mosenturm/nginx-als-proxy-server-für-gunicorn-unter-plesk-einrichten-ca2f30f54fef>
-- <https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04>
+- <PageLink url="https://medium.com/@mosenturm/nginx-als-proxy-server-für-gunicorn-unter-plesk-einrichten-ca2f30f54fef" />
+- <PageLink url="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04" />

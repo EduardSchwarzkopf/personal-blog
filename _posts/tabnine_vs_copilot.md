@@ -51,7 +51,9 @@ One of those problems is privacy. For me, and probably for one or two others, th
 > **Is the transmitted data secure?**  
 > All data is transmitted and stored securely. Access to the telemetry is strictly limited to individuals on a need-to-know basis. Inspection of the gathered source code will be predominantly automatic, and when humans read it, it is specifically with the aim of improving the model or detecting abuse.
 
-<a href="https://copilot.github.com/#faq-is-the-transmitted-data-secure" target="_blank">Copilot FAQ</a>
+<PageLink url="https://copilot.github.com/#faq-is-the-transmitted-data-secure">
+Copilot FAQ
+</PageLink>
 
 This point alone will prevent some developers from starting Copilot. At least that is the case for me.
 
@@ -59,14 +61,18 @@ Here Tabnine has a better position than GitHub:
 
 > For work projects, staying compliant often means that code cannot leave your network. Tabnine works without sending any of your code to a cloud. You can easily run Tabnine locally, ensuring that no code or queries ever leave your local network.
 
-<a href="https://www.tabnine.com" target="_blank">Tabnine Homepage</a>
+<PageLink url="https://www.tabnine.com">
+Tabnine Homepage
+</PageLink>
 
 Other problems that still exist with Copilot are:
 
 - License legal issues
 - Accuracy of Code prediction
 
-[A detailed article about these problems has been written by Jonathan Fielding](https://javascript.plainenglish.io/why-i-disagree-with-github-copilot-naysayers-62a43cce6329)
+<PageLink url="https://javascript.plainenglish.io/why-i-disagree-with-github-copilot-naysayers-62a43cce6329">
+A detailed article about these problems has been written by Jonathan Fielding
+</PageLink>
 
 Tabnine, on the other hand, has been on the market for a long time and has already eliminated all teething problems. Working with it seems very natural to me because of the way I write code, but now, much faster than before.
 

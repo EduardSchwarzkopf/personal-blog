@@ -19,14 +19,14 @@ I assume that your project is running on its own domain and not a subfolder. If 
 
 ### Preparation
 
-First make sure you have NodeJs installed in plesk. You can read instructions on how to do this on the Plesk blog under the Prerequisites section: <https://www.plesk.com/blog/product-technology/node-js-plesk-onyx/>
+First make sure you have NodeJs installed in plesk. You can read instructions on how to do this on the Plesk blog under the Prerequisites section: <PageLink url="https://www.plesk.com/blog/product-technology/node-js-plesk-onyx/" />
 
 ### Git
 
 The next step is to set up the Git repo. Click on the Git icon under the domain and add your Git repository. Add your link to your repo and click OK.
 
 Note: If your repository is private, you still need to use the SSH variant. Here the link usually starts with `git@GitHub.com:...`.
-Then copy the SSH public key from Plesk and add it to your profile: <https://GitHub.com/settings/keys>
+Then copy the SSH public key from Plesk and add it to your profile: <PageLink url="https://GitHub.com/settings/keys" />
 
 - New key
 - Enter title
@@ -197,30 +197,30 @@ if (command === 'dev') {
 //# sourceMappingURL=next.map
 ```
 
-We have to have our own startup file, because in Plesk you can't specify the `defaultCommand` and otherwise the default `dev` is taken. Vincent Van Uffelen wrote [an article](https://nzembla.medium.com/hosting-next-js-on-plesk-passenger-in-2021-c60585888c72) about this very topic, which helped me a lot.
+We have to have our own startup file, because in Plesk you can't specify the `defaultCommand` and otherwise the default `dev` is taken. Vincent Van Uffelen wrote <PageLink url="https://nzembla.medium.com/hosting-next-js-on-plesk-passenger-in-2021-c60585888c72">an article</PageLink> about this very topic, which helped me a lot.
 
-Now open the Node.js settings in your domain. Make sure that your version is the same as the one you set in the `additional deploy actions`.
+Now open the Node.js settings in your domain. Make sure that your version is the same as the one you set in the **additional deploy actions**.
 
-Under `Application Startup File` select the `next-start.js` you just created.
+Under **Application Startup File** select the **next-start.js** you just created.
 
 If everything is set correctly, you should now be able to click the NPM install button to install all dependencies.
 
 ## GitHub
 
-Now you want to set up a webhook on GitHub to publish pushes to the `main` branch directly. You can find the link under
+Now you want to set up a webhook on GitHub to publish pushes to the **main** branch directly. You can find the link under
 
 1. Domain
 2. Git
 3. Repository Settings
 4. Webhook URL.
 
-Now go to your repository on GitHub. `Settings` Tab >> `Webhooks`. Add the button `Add Webhook`. Paste the copied link under `Payload URL`.
+Now go to your repository on GitHub. **Settings** Tab > **Webhooks**. Add the button **Add Webhook**. Paste the copied link under **Payload URL**.
 Content-Type is `application/json`. Leave the rest as it is.
 
 ## Conlcusion
 
 If you have followed all the steps, you should now be hosting your own NextJs app.
 
-But as I've written in the beginning, I recommend this way only if you absolutely want to host your app yourself. Vercel is otherwise one of the best alternatives. [In the docs](https://NextJs.org/docs/deployment) you can find detailed instructions on how to host your app, also with auto-deployment and completely free.
+But as I've written in the beginning, I recommend this way only if you absolutely want to host your app yourself. Vercel is otherwise one of the best alternatives. <PageLink url="https://NextJs.org/docs/deployment">In the docs</PageLink> you can find detailed instructions on how to host your app, also with auto-deployment and completely free.
 
-If you have any problems or I missed an important step, feel free to contact me [via Twitter](https://twitter.com/EduSchwarzkopf).
+If you have any problems or I missed an important step, feel free to contact me <PageLink url="https://twitter.com/EduSchwarzkopf">via Twitter</PageLink>.

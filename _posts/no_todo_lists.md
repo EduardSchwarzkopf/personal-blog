@@ -8,7 +8,7 @@ In search of better working techniques, I recently came across a video that deal
 
 ## Too much to do
 
-[According to one statistic](https://www.huffpost.com/entry/forty-one-percent-of-tasks-on-to-do-lists-are-never-done_b_9308978), 40% of the things on a to-do list don't get done. I found this number quite scary, because almost half of the things I probably want to get done, I will not get done on average. What could possibly be the reason for this?
+<PageLink url="https://www.huffpost.com/entry/forty-one-percent-of-tasks-on-to-do-lists-are-never-done_b_9308978">According to one statistic</PageLink>, 40% of the things on a to-do list don't get done. I found this number quite scary, because almost half of the things I probably want to get done, I will not get done on average. What could possibly be the reason for this?
 
 I now know that I need an average of 30-60 minutes for a task on my to-do list. I don't even include smaller tasks. I also know that I put about 6 tasks on my to-do list on average. So I need at least 3 hours for all tasks on the list!
 
