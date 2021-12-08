@@ -35,12 +35,7 @@ I've been using Tabnine for about a month now and I have to say it's terrific. W
 In the time I've been using Tabnine, I feel like I've been able to write faster.
 
 Here is an example of how easily you can write a whole function:
-<video autoPlay loop muted>
-
-  <source type="video/mp4" src="/assets/blog/tabnine_vs_copilot/tabnine_in_action.mp4"></source>
-  <source type="video/webm" src="/assets/blog/tabnine_vs_copilot/tabnine_in_action.webm"></source>
-  <p>Your browser does not support the video element.</p>
-</video>
+<VideoFile filePath="/assets/blog/tabnine_vs_copilot/tabnine_in_action" />
 
 ## The comparison
 
