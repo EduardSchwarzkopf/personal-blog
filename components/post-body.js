@@ -1,6 +1,8 @@
 import { MDXRemote } from "next-mdx-remote";
 import { PageLink } from "./PageLink";
-const components = { PageLink };
+import { VideoFile } from "./VideoFile";
+
+const components = { PageLink, VideoFile };
 
 export default function PostBody({ content }) {
   return (
