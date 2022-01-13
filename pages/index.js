@@ -99,7 +99,7 @@ const skillSet = [
 const workHistory = [
   {
     title: "wrkbeat GmbH",
-    subtitle: "Trainee",
+    subtitle: "Apprentice",
     date: "2019—\u00a0\u00a0",
   },
   {
