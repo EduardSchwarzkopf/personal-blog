@@ -129,8 +129,9 @@ export default function Index() {
           <SectionContent>
             <div className="space-y-9">
               <p>
-                Hey, I'm Eduard. I am a media designer, developer, husband and
-                father. I am currently in an apprenticeship as a developer.
+                Hey, I'm a broadly skilled developer with skills all the way up
+                the stack. I can build responsive, accessible, custom UI with
+                modern techniques, as well as develop in Python.
               </p>
               <p>
                 Before that I was a self-employed media designer and helped my
