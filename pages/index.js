@@ -130,18 +130,18 @@ export default function Index() {
             <div className="space-y-9">
               <p>
                 Hey, I'm a broadly skilled developer with skills all the way up
-                the stack. I can build responsive, accessible, custom UI with
-                modern techniques, as well as develop in Python.
+                the stack. I'm familiar with PHP from my current Job. For my
+                side-projects, I'm using Python as my backend, switched from
+                Flask to FastAPI. Building a UI is with the help of Tailwind is
+                easy, but I'm focusing on building a good backend with a solid
+                structure.
               </p>
               <p>
-                Before that I was a self-employed media designer and helped my
-                clients to give their companies a face. My focus was mainly on
-                logos and print media.
-              </p>
-              <p>
-                My interests in tech are still very far-reaching at the moment.
-                I am very interested in web development, web 3.0, security and
-                OSINT. Which area will be my favorite remains to be seen.
+                I'm a committed, attentive, empathetic, detail-oriented team
+                player. I have 2 years of experience working remotely, and have
+                worked as part of a team for 3 years. My interests in tech are
+                still very far-reaching. I am interested in web development, web
+                3.0, security and OSINT.
               </p>
               <p>
                 On{" "}
