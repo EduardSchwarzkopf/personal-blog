@@ -129,12 +129,12 @@ export default function Index() {
           <SectionContent>
             <div className="space-y-9">
               <p>
-                Hey, I'm Eduard, a broadly skilled developer with skills all the
-                way up the stack. I'm familiar with PHP from my current Job. For
-                my side-projects, I'm using Python as my backend, switched from
-                Flask to FastAPI. Building a UI is with the help of Tailwind is
-                easy, but I'm focusing on building a good backend with a solid
-                structure.
+                Hey! I'm Eduard, a broadly skilled developer with qualifications
+                all the way up the stack. Currently I've become familiar with
+                PHP in my latest career. For my side-projects, I'm using Python
+                as my backend, switching from Flask to FastAPI. Building a UI
+                with the help of Tailwind is easy, but I'm focusing on building
+                a good backend with a solid structure.
               </p>
               <p>
                 I'm a committed, attentive, empathetic, detail-oriented team
